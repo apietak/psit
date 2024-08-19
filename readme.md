@@ -133,8 +133,10 @@ decom.to_netcdf("decompressed.nc")
 ```
 
 
-# CLI
-## Manual installation
+## CLI
+
+### Manually installed
+
 To use the cli interface run
 ```
 python psitcli.py {compress/decompress/test} [options] in_file out_file
@@ -147,7 +149,7 @@ python psitcli.py {compress/decompress/test} -h
 ```
 command.
 
-## Docker 
+### Docker 
 
 The usage of the docker is the same as the one used for manual installation, with the only exception that instead of calling `python psitcli.py ...` one executes the container:
 ```
