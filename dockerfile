@@ -19,7 +19,7 @@ RUN pip --version
 
 WORKDIR /app
 COPY requirements.txt /app
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install -r requirements.txt
 
 # SZ3 stuff
 RUN apt install -y git
@@ -43,3 +43,6 @@ RUN apt install -y libopenjp2-7
 COPY coords_small.csv /app
 
 ENTRYPOINT [ "python3", "/app/psitcli.py" ]
+
+
+ENV LD_LIBRARY_PATH="/app/SZ3/install/lib/"

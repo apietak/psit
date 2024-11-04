@@ -1104,14 +1104,14 @@ class Psit:
         return data_decomp
     
     def _sz3_encoding(self, input_arr: np.ndarray, work_dir: str, output_path: str, max_rel_err: float):
-        sz = SZ(f"{os.path.dirname(os.path.realpath(__file__))}/SZ3/install/lib64/libSZ3c.so")
+        sz = SZ(f"{os.path.dirname(os.path.realpath(__file__))}/SZ3/install/lib/libSZ3c.so")
         data_cmpr, cmpr_ratio = sz.compress(input_arr, 1, 0, max_rel_err, 0)
         np.save(os.path.join(work_dir,output_path), data_cmpr)
         res = {"real_cratio": cmpr_ratio, "path" : output_path + ".npy", "shape" : input_arr.shape}
         return res
     
     def _sz3_decoding(self, res, work_dir):
-        sz = SZ(f"{os.path.dirname(os.path.realpath(__file__))}/SZ3/install/lib64/libSZ3c.so")
+        sz = SZ(f"{os.path.dirname(os.path.realpath(__file__))}/SZ3/install/lib/libSZ3c.so")
         data_cmpr = np.load(os.path.join(work_dir, res["path"]))
         data_dec = sz.decompress(data_cmpr, res["shape"], np.float32)
         return data_dec

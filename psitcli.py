@@ -211,7 +211,7 @@ if __name__ == "__main__":
             if "crf" in conf:
                 args.crf = conf["crf"]
             if "factor" in conf:
-                args.factor = conf["fac"]
+                args.factor = conf["factor"]
             if "num_workers" in conf:
                 args.num_workers = conf["num_workers"]
             if "color_method" in conf:
