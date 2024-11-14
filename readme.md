@@ -28,7 +28,7 @@ This will create a container called psit which can then be used.
 
 If also the scripting interface of psit will be used, or no docker is available, psit can be installed manually. For this a c/c++ compiler, cmake, python (with version >= 3.11 tested, >= 3.10 might work), and git is needed.
 
-In a first step SZ3 needs to be installed and compiled, the installation directory of the files need to be `<location_of_psit.py>/SZ3/install/lib64`. In order to achieve this the following commands can be used:
+In a first step SZ3 needs to be installed and compiled, the installation directory of the files need to be `<location_of_psit.py>/SZ3/install/lib`. In order to achieve this the following commands can be used:
 ```
 git clone "https://github.com/szcompressor/SZ3.git" ./SZ3
 cd SZ3
